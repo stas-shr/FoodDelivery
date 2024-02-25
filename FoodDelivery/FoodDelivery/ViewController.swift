@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -13,8 +14,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .blue
+        addLabel()
     }
 
+    func addLabel() {
+        let label = UILabel()
+        label.text = "Delivery App"
+        view.addSubview(label)
+        
+        label.snp.makeConstraints { make in
+            make.top.equalTo(200)
+            make.left.right.equalTo(20)
+        }
+        
+        label.font = .Roboto.black.size(of: 40)
+        label.textColor = .white
+    }
 
 }
 
