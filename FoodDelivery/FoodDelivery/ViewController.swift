@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .blue
+        addLabel()
     }
 
     func addLabel() {
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
             make.left.right.equalTo(20)
         }
         
-        label.font = .systemFont(ofSize: 40, weight: UIFont.Weight(20))
+        label.font = .Roboto.black.size(of: 40)
         label.textColor = .white
     }
 
